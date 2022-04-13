@@ -1,6 +1,12 @@
 import React from 'react';
 import './style.css';
-import { Solution1, Solution2, Solution3 } from './solutions';
+import {
+  Solution1,
+  Solution2,
+  Solution3,
+  Solution4,
+  Solution5,
+} from './solutions';
 
 export default function App() {
   return (
@@ -16,6 +22,15 @@ export default function App() {
 
       <h3>star question </h3>
       <Solution3 />
+      <br />
+
+      <h2>B</h2>
+      <h3>question 1 </h3>
+      <Solution4 />
+      <br />
+
+      <h3>question 2 </h3>
+      <Solution5 />
       <br />
     </div>
   );

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// Take 2 inputs from the user. A lower price, and an upper price. List only the products which fall in between the lower and upper price range.
-
 const data = [
   {
     id: 1,

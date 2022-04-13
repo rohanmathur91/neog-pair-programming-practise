@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// Extension of question02 - show the total price at the end of the list which would be the sum of (price * quantity) for all items
-
 const data = [
   {
     id: 1,

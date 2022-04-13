@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// You have a list of items with price and quantity. Create two buttons for each and every element in the data list. One will increment the quantity of the particular item, and one will decrement the quantity. Show all details of the items on the page.
-
 const data = [
   {
     id: 1,
