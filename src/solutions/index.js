@@ -1,3 +1,3 @@
-export { Solution1 } from './A/Solution1';
-export { Solution2 } from './A/Solution2';
-export { Solution3 } from './A/Solution3';
+export { Solution1 } from './Solution1';
+export { Solution2 } from './Solution2';
+export { Solution3 } from './Solution3';
