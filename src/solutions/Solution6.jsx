@@ -23,21 +23,39 @@ const data = [
   },
 ];
 
-export const Solution5 = () => {
+export const Solution6 = () => {
   const [items, setItems] = useState(data);
+  const [deletedItems, setDeletedItems] = useState([]);
 
-  const handleRemove = (id) => {
-    setItems((prevItems) => prevItems.filter((item) => id != item.id));
+  const handleRemove = (item) => {
+    setDeletedItems((prevItems) => [item, ...prevItems]);
+    setItems((prevItems) => prevItems.filter(({ id }) => id != item.id));
+  };
+
+  const handleUndoRemove = (item) => {
+    setItems((prevItems) => [item, ...prevItems]);
+    setDeletedItems((prevItems) => prevItems.filter(({ id }) => id != item.id));
   };
 
   return (
     <ul>
-      {items.map(({ id, item }) => (
-        <li key={id}>
-          <span>{item}</span>
-          <button onClick={() => handleRemove(id)}>remove</button>
-        </li>
-      ))}
+      <>
+        {items.map((item) => (
+          <li key={item.id}>
+            <span>{item.item}</span>
+            <button onClick={() => handleRemove(item)}>remove</button>
+          </li>
+        ))}
+
+        {deletedItems.length > 0 &&
+          deletedItems.map((item) => (
+            <li key={item.id}>
+              <button onClick={() => handleUndoRemove(item)}>
+                undo remove
+              </button>
+            </li>
+          ))}
+      </>
     </ul>
   );
 };
